@@ -112,11 +112,17 @@ bash train_big.sh
 <summary><span style="font-weight: bold;">📋 Advanced: Command Line Arguments for train.py</span></summary>
 
   #### --loss_thresh
-  #### --grad_abs_thresh
-  #### --highfeature_lr
-  #### --lowfeature_lr
+  Threshold of the loss map; a lower value generally results in more Gaussians being retained.
+  #### --grad_abs_thresh 
+  Absolute gradient (same as Abs-GS) threshold for split.
   #### --grad_thresh
+  Gradient(same as vanilla 3DGS) threshold for clone.
+  #### --highfeature_lr
+  Learning rate for high-order SH coefficients (features_rest).
+  #### --lowfeature_lr
+  Learning rate for low-order SH coefficients (features_dc).
   #### --dense
+  Percentage of scene extent (0--1) a point must exceed to be forcibly densified.
   #### --mult 
   Multiplier for the compact box to control the tile number of each splat
   #### --source_path / -s
